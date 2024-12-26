@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Rocket Search</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
+</head>
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: linear-gradient(180deg, #fff 0, rgba(242,246,250,1) 300px);
+    }
+
+    .app {
+        width: 100%;
+        max-width: 1480px;
+        min-height: 100vh;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        gap: 24px;
+        font-family: Circe, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        padding: 40px;
+        margin: 0 auto;
+
+        @media (width <= 600px) {
+            padding: 24px;
+        }
+
+        @media (width <= 425px) {
+            padding: 16px;
+        }
+
+        @media (width <= 320px) {
+            padding: 8px;
+        }
+    }
+</style>
+<body>
+<div class="app">
+    <div>
+        <img src="./src/assets/images/logoDetMir.svg" alt="" width="337">
+    </div>
+    <rrs-search-input-with-preview></rrs-search-input-with-preview>
+    <rrs-serp></rrs-serp>
+</div>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
