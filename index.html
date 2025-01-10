@@ -7,8 +7,6 @@
     <title>Retail Rocket Search</title>
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css">
-  <script type="module" crossorigin src="/assets/index-BXdiaBMz.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-Lk0EJfKf.css">
 </head>
 <style>
     html, body {
@@ -23,8 +21,7 @@
         width: 100%;
         max-width: 1480px;
         min-height: 100vh;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
+        box-sizing: border-box;
         display: grid;
         grid-template-rows: auto auto 1fr;
         gap: 24px;
@@ -48,11 +45,12 @@
 <body>
 <div class="app">
     <div>
-        <img src="/assets/logoDetMir-B6KmLx9I.svg" alt="" width="337">
+        <img src="./src/assets/images/logoDetMir.svg" alt="" width="337">
     </div>
     <rrs-search-input-with-preview></rrs-search-input-with-preview>
     <rrs-serp></rrs-serp>
 </div>
 
+<script type="module" src="/src/main.ts"></script>
 </body>
 </html>

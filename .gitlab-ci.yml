@@ -1,0 +1,47 @@
+---
+.node_template: &node_template
+  image: mcr.microsoft.com/playwright:v1.48.1-jammy
+  before_script:
+    - corepack enable
+    - corepack prepare pnpm@latest-9 --activate
+    - pnpm config set store-dir .pnpm-store
+    - pnpm install --frozen-lockfile
+  cache:
+    key:
+      files:
+        - pnpm-lock.yaml
+    paths:
+      - .pnpm-store
+
+stages:
+  - lint
+  - test
+  - publish
+
+lint:
+  stage: lint
+  script:
+    - pnpm lint:code
+    - pnpm lint:style
+  <<: *node_template
+
+test:
+  stage: test
+  needs: [ 'lint' ]
+  script:
+    - pnpm test:vitest
+    - pnpm storybook:build
+    - pnpm test:storybook:ci
+  <<: *node_template
+
+publish:
+  stage: publish
+  needs: [ 'test' ]
+  script:
+    - cat .npmrc
+    - pnpm build
+    - pnpm publish
+  rules:
+    - if: '$CI_COMMIT_TAG'
+  when: manual
+  <<: *node_template

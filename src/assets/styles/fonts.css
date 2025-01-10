@@ -1,0 +1,44 @@
+@font-face {
+  font-display: swap;
+  font-family: Circe;
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://go.detmir.st/fonts/1734707004/e841c65b7d08e0aebc3a78bfaa327df5.eot');
+  src:
+    url('https://go.detmir.st/fonts/1734707004/6c28b088081c961225144278a4e42cf3.woff2')
+      format('woff2'),
+    url('https://go.detmir.st/fonts/1734707004/6444e13db38127d31ba2b497d0500090.woff')
+      format('woff'),
+    url('https://go.detmir.st/fonts/1734707004/12af16bb3c360852e31ead99e01114ad.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Circe;
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://go.detmir.st/fonts/1734707004/16df405a0723b7bda474166ee3b71d5c.eot');
+  src:
+    url('https://go.detmir.st/fonts/1734707004/cfdb632d059cf194f12a9b2801fd8474.woff2')
+      format('woff2'),
+    url('https://go.detmir.st/fonts/1734707004/fc2a6498c769c8351fc78ed012d3f8d7.woff')
+      format('woff'),
+    url('https://go.detmir.st/fonts/1734707004/c9a4a2a44c77cfe2df8d0884f6e6ac57.ttf')
+      format('truetype');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Circe;
+  font-style: normal;
+  font-weight: 800;
+  src: url('https://go.detmir.st/fonts/1734707004/9607f2141b91e16aab242dbeb28e647d.eot');
+  src:
+    url('https://go.detmir.st/fonts/1734707004/eabc62d103e4ac69d508b91db1358834.woff2')
+      format('woff2'),
+    url('https://go.detmir.st/fonts/1734707004/12b20b27b37b3f9da6dabd78af280d51.woff')
+      format('woff'),
+    url('https://go.detmir.st/fonts/1734707004/95f63d59c96589a11f05d38d6e231730.ttf')
+      format('truetype');
+}
